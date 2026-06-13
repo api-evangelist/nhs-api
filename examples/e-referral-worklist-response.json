@@ -1,0 +1,84 @@
+{
+  "resourceType": "Bundle",
+  "id": "c1f72d4c-1e5b-4e53-a5f3-78942db87d22",
+  "meta": {
+    "lastUpdated": "2026-06-13T10:30:00+00:00"
+  },
+  "type": "searchset",
+  "total": 2,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://api.service.nhs.uk/referrals/FHIR/STU3/Task?_list=$$WORKLIST$$&status=active"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://api.service.nhs.uk/referrals/FHIR/STU3/Task/000000070000",
+      "resource": {
+        "resourceType": "Task",
+        "id": "000000070000",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2026-06-10T09:00:00+00:00",
+          "profile": [
+            "https://fhir.nhs.uk/STU3/StructureDefinition/eRS-Task-1"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.nhs.uk/Id/ers-referral-id",
+            "value": "000000070000"
+          }
+        ],
+        "status": "in-progress",
+        "businessStatus": {
+          "coding": [
+            {
+              "system": "https://fhir.nhs.uk/STU3/CodeSystem/eRS-TaskBusinessStatus-1",
+              "code": "REFER",
+              "display": "Refer"
+            }
+          ]
+        },
+        "priority": "routine",
+        "description": "Referral for orthopaedic assessment",
+        "for": {
+          "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9000000009"
+          }
+        },
+        "authoredOn": "2026-06-10T09:00:00+00:00",
+        "lastModified": "2026-06-10T09:00:00+00:00"
+      }
+    },
+    {
+      "fullUrl": "https://api.service.nhs.uk/referrals/FHIR/STU3/Task/000000070001",
+      "resource": {
+        "resourceType": "Task",
+        "id": "000000070001",
+        "status": "in-progress",
+        "businessStatus": {
+          "coding": [
+            {
+              "system": "https://fhir.nhs.uk/STU3/CodeSystem/eRS-TaskBusinessStatus-1",
+              "code": "PROVIDER_CLINICALLY_REVIEWED",
+              "display": "Provider Clinically Reviewed"
+            }
+          ]
+        },
+        "priority": "urgent",
+        "description": "Urgent cardiology referral",
+        "for": {
+          "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9000000025"
+          }
+        },
+        "authoredOn": "2026-06-08T14:30:00+00:00",
+        "lastModified": "2026-06-12T11:00:00+00:00"
+      }
+    }
+  ]
+}

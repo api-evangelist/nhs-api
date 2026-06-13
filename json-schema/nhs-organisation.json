@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.service.nhs.uk/schemas/organisation",
+  "title": "NHS Organisation (ODS FHIR R4)",
+  "description": "An NHS organisation as returned by the Organisation Data Service FHIR R4 API. Based on the FHIR R4 Organization resource.",
+  "type": "object",
+  "required": ["resourceType", "id"],
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "Organization",
+      "description": "FHIR resource type"
+    },
+    "id": {
+      "type": "string",
+      "description": "ODS code uniquely identifying the organisation (e.g. RJ1, A81001)"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "versionId": {
+          "type": "string"
+        }
+      }
+    },
+    "identifier": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "system": {
+            "type": "string",
+            "description": "Identifier system URI (e.g. https://fhir.nhs.uk/Id/ods-organization-code)"
+          },
+          "value": {
+            "type": "string",
+            "description": "ODS code value"
+          }
+        }
+      }
+    },
+    "active": {
+      "type": "boolean",
+      "description": "Whether the organisation's record is still in active use"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "coding": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "system": { "type": "string" },
+                "code": { "type": "string" },
+                "display": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "The name used for the organisation"
+    },
+    "telecom": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "system": {
+            "type": "string",
+            "enum": ["phone", "fax", "email", "url"]
+          },
+          "value": { "type": "string" },
+          "use": {
+            "type": "string",
+            "enum": ["work", "home", "mobile", "old"]
+          }
+        }
+      }
+    },
+    "address": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "use": { "type": "string" },
+          "line": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "city": { "type": "string" },
+          "district": { "type": "string" },
+          "postalCode": { "type": "string" },
+          "country": { "type": "string" }
+        }
+      }
+    },
+    "partOf": {
+      "type": "object",
+      "description": "The organisation of which this organisation forms a part",
+      "properties": {
+        "reference": { "type": "string" },
+        "identifier": {
+          "type": "object",
+          "properties": {
+            "system": { "type": "string" },
+            "value": { "type": "string" }
+          }
+        },
+        "display": { "type": "string" }
+      }
+    }
+  }
+}

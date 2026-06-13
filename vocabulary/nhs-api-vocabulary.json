@@ -1,0 +1,107 @@
+{
+  "title": "NHS API Vocabulary",
+  "description": "Key terms, concepts, and resource types used across NHS England APIs",
+  "source": "https://digital.nhs.uk/developer/api-catalogue",
+  "categories": {
+    "fhir_resources": [
+      "Patient",
+      "Organization",
+      "OrganizationAffiliation",
+      "Appointment",
+      "Slot",
+      "Schedule",
+      "Practitioner",
+      "PractitionerRole",
+      "Bundle",
+      "OperationOutcome",
+      "Composition",
+      "MedicationRequest",
+      "AllergyIntolerance",
+      "Immunization",
+      "Condition",
+      "Procedure",
+      "ReferralRequest",
+      "ServiceRequest",
+      "Task",
+      "MessageHeader",
+      "Parameters",
+      "ValueSet",
+      "CodeSystem",
+      "List",
+      "DocumentReference"
+    ],
+    "nhs_identifiers": [
+      "NHS Number",
+      "ODS Code",
+      "ASID",
+      "SDS Role Profile ID",
+      "Organisation Reference",
+      "Prescription ID",
+      "Referral UBRN"
+    ],
+    "authentication_methods": [
+      "CIS2 OAuth2",
+      "Application-restricted (signed JWT)",
+      "User-restricted OAuth2",
+      "OpenID Connect (OIDC)",
+      "Spine Secure Proxy (SSP)"
+    ],
+    "identity_levels": [
+      "P0 (low confidence)",
+      "P5 (medium confidence)",
+      "P9 (high confidence - NHS Login)"
+    ],
+    "api_types": [
+      "FHIR R4",
+      "FHIR STU3",
+      "REST",
+      "OpenID Connect",
+      "OAuth 2.0",
+      "HL7 FHIR Messaging"
+    ],
+    "clinical_domains": [
+      "Patient Demographics",
+      "GP Connect",
+      "Electronic Prescriptions",
+      "Summary Care Records",
+      "Booking and Referral",
+      "Organisation Data",
+      "Spine Directory",
+      "e-Referral Service",
+      "Elective Waiting List",
+      "Content Syndication"
+    ],
+    "e_referral_operations": [
+      "A004 - Retrieve Reference Data",
+      "A005 - Retrieve Appointment Slots",
+      "A006 - Book or Defer Appointment",
+      "A007 - Retrieve Appointment",
+      "A008 - Cancel Appointment",
+      "A010 - Retrieve Worklist",
+      "A011 - Retrieve Clinical Information",
+      "A012 - Upload Clinical Information",
+      "A013 - Accept Referral",
+      "A014 - Reject Referral",
+      "A015 - Retrieve Patient",
+      "A016 - Create Referral",
+      "A017 - Create Referral and Send for Triage",
+      "A018 - Maintain Referral Letter",
+      "A021 - Generate Patient Letter",
+      "A022 - Upload Patient Letter",
+      "A023 - Retrieve Attachment",
+      "A024 - Retrieve Clinical Review",
+      "A025 - Change Shortlist",
+      "A030 - Retrieve Business Function Roles"
+    ],
+    "ods_operations": [
+      "Search for an organisation",
+      "Search for a relationship",
+      "Get organisation details",
+      "Get relationship details",
+      "Get deletion notices",
+      "Search for additional instance and reference data",
+      "Perform a ValueSet expansion",
+      "Get capability statement"
+    ]
+  }
+}

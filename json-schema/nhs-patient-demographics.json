@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.service.nhs.uk/schemas/patient-demographics",
+  "title": "NHS Patient Demographics (PDS FHIR R4)",
+  "description": "A patient demographic record as returned by the Personal Demographics Service FHIR R4 API. Based on the FHIR R4 Patient resource.",
+  "type": "object",
+  "required": ["resourceType", "id"],
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "Patient"
+    },
+    "id": {
+      "type": "string",
+      "description": "NHS Number (10-digit identifier)"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "versionId": { "type": "string" },
+        "security": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "system": { "type": "string" },
+              "code": { "type": "string" },
+              "display": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "identifier": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "system": {
+            "type": "string",
+            "description": "https://fhir.nhs.uk/Id/nhs-number"
+          },
+          "value": {
+            "type": "string",
+            "pattern": "^[0-9]{10}$",
+            "description": "10-digit NHS Number"
+          },
+          "extension": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "description": "NHS Number verification status extension"
+            }
+          }
+        }
+      }
+    },
+    "name": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "use": {
+            "type": "string",
+            "enum": ["usual", "official", "nickname", "old"]
+          },
+          "family": { "type": "string" },
+          "given": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "prefix": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "suffix": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "period": {
+            "type": "object",
+            "properties": {
+              "start": { "type": "string", "format": "date" },
+              "end": { "type": "string", "format": "date" }
+            }
+          }
+        }
+      }
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "other", "unknown"]
+    },
+    "birthDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "deceasedBoolean": {
+      "type": "boolean"
+    },
+    "deceasedDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "address": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "use": { "type": "string" },
+          "line": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "city": { "type": "string" },
+          "district": { "type": "string" },
+          "postalCode": { "type": "string" }
+        }
+      }
+    },
+    "generalPractitioner": {
+      "type": "array",
+      "description": "Patient's registered GP practice",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "identifier": {
+            "type": "object",
+            "properties": {
+              "system": { "type": "string" },
+              "value": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "extension": {
+      "type": "array",
+      "description": "NHS-specific FHIR extensions (e.g. NHS communication preferences, nominated pharmacy, place of birth)"
+    }
+  }
+}
