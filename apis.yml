@@ -1,0 +1,382 @@
+name: NHS API
+description: >
+  NHS England's API management platform provides FHIR R4 and REST APIs for
+  healthcare interoperability across the NHS. The platform covers GP Connect
+  (appointment management and access record), Personal Demographics Service,
+  Electronic Prescription Service, Summary Care Records, NHS login (OpenID
+  Connect for citizens), Booking and Referral, Organisation Data Service,
+  and content syndication. APIs are managed via NHS England's Apigee-based
+  API platform and are targeted at system suppliers, NHS organisations, and
+  accredited third-party healthcare application developers.
+image: https://digital.nhs.uk/svg/nhs-logo.svg
+tags:
+  - Healthcare
+  - FHIR
+  - NHS
+  - UK
+  - HL7
+  - Electronic Prescriptions
+  - Patient Demographics
+  - GP Connect
+  - NHS Login
+  - Interoperability
+created: "2026-06-13"
+modified: "2026-06-13"
+url: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/apis.yml
+specificationVersion: "0.19"
+apis:
+  - name: Personal Demographics Service - FHIR API
+    description: >
+      Access and update patient demographic information held in the national NHS
+      patient database. Supports search, retrieve, and update of name, address,
+      date of birth, registered GP, nominated pharmacy, NHS number, and related
+      persons. Uses FHIR R4 resources.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
+    baseURL: https://api.service.nhs.uk/personal-demographics
+    tags:
+      - Patient Demographics
+      - FHIR R4
+      - NHS Number
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
+      - type: OpenAPI
+        url: https://github.com/NHSDigital/personal-demographics-service-api
+      - type: Sandbox
+        url: https://sandbox.api.service.nhs.uk/personal-demographics/FHIR/R4
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+    meta:
+      - key: authentication
+        value: CIS2 OAuth2 / Application-restricted (signed JWT)
+      - key: fhir-version
+        value: R4
+
+  - name: GP Connect Access Record Structured - FHIR API
+    description: >
+      Retrieve structured clinical records from a patient's registered GP
+      practice, including medications, allergies, immunisations, problems,
+      consultations, referrals, and investigations. Used by clinical systems
+      delivering direct care.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/gp-connect-access-record-structured-fhir
+    baseURL: https://api.service.nhs.uk/gp-connect
+    tags:
+      - GP Connect
+      - FHIR
+      - Clinical Records
+      - Structured
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/gp-connect-access-record-structured-fhir
+      - type: OpenAPI
+        url: https://github.com/NHSDigital/gp-connect-access-record-fhir-api
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+    meta:
+      - key: authentication
+        value: CIS2 OAuth2 via Spine Secure Proxy (SSP) with JWT
+      - key: fhir-version
+        value: STU3 / R4
+
+  - name: GP Connect Appointment Management - FHIR API
+    description: >
+      Manage GP practice appointments between different clinical systems.
+      Supports searching for free slots, booking, amending, and cancelling
+      appointments at GP practices.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/gp-connect-appointment-management-fhir
+    baseURL: https://api.service.nhs.uk/gp-connect
+    tags:
+      - GP Connect
+      - FHIR
+      - Appointments
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/gp-connect-appointment-management-fhir
+      - type: OpenAPI
+        url: https://github.com/NHSDigital/gp-connect-appointments-management-fhir
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+    meta:
+      - key: authentication
+        value: CIS2 OAuth2 via Spine Secure Proxy (SSP)
+
+  - name: GP Connect Access Document - FHIR API
+    description: >
+      Retrieve documents held at a patient's registered GP practice, such as
+      letters, discharge summaries, and other clinical documents stored in
+      GP systems. Used alongside the Access Record Structured API.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/gp-connect-access-document-fhir
+    baseURL: https://api.service.nhs.uk/gp-connect
+    tags:
+      - GP Connect
+      - FHIR
+      - Documents
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/gp-connect-access-document-fhir
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+    meta:
+      - key: authentication
+        value: CIS2 OAuth2 via Spine Secure Proxy (SSP)
+
+  - name: Electronic Prescription Service - FHIR API
+    description: >
+      Send, track, and manage electronic prescriptions through the NHS
+      Electronic Prescription Service (EPS). Supports prescribing (preparing,
+      signing, cancelling prescriptions) and dispensing (releasing, returning,
+      updating prescriptions) workflows using FHIR R4 messaging.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
+    baseURL: https://api.service.nhs.uk/electronic-prescriptions
+    tags:
+      - Electronic Prescriptions
+      - FHIR R4
+      - Prescribing
+      - Dispensing
+      - EPS
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
+      - type: OpenAPI
+        url: https://github.com/NHSDigital/electronic-prescription-service-api
+      - type: Sandbox
+        url: https://sandbox.api.service.nhs.uk/electronic-prescriptions
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+    meta:
+      - key: authentication
+        value: Application-restricted (signed JWT) for machine-to-machine; CIS2 OAuth2 for user-restricted
+      - key: fhir-version
+        value: R4
+
+  - name: EPS Prescription Tracker - FHIR API
+    description: >
+      Real-time tracking of prescriptions within the Electronic Prescription
+      Service. Enables authorised users to retrieve details about prescription
+      status and dispensation progress without writing to EPS.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/eps-prescription-tracker-fhir-api
+    baseURL: https://api.service.nhs.uk/eps-tracker
+    tags:
+      - Electronic Prescriptions
+      - FHIR
+      - Prescription Tracking
+      - EPS
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/eps-prescription-tracker-fhir-api
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+
+  - name: NHS Login API
+    description: >
+      OpenID Connect / OAuth 2.0 identity and authentication service for NHS
+      citizens. Allows patients and members of the public to authenticate with
+      a verified NHS account and share profile data (NHS number, demographics,
+      GP registration details) with connected health apps and services.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/nhs-login
+    baseURL: https://auth.login.nhs.uk
+    tags:
+      - NHS Login
+      - OAuth2
+      - OpenID Connect
+      - Identity
+      - Patient Authentication
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/nhs-login
+      - type: OpenAPI
+        url: https://nhsconnect.github.io/nhslogin/scopes-and-claims/
+      - type: Sandbox
+        url: https://auth.sandpit.signin.nhs.uk
+    contact:
+      - FN: NHS Login Team
+        email: api.management@nhs.net
+    meta:
+      - key: authentication
+        value: OpenID Connect (OIDC) on OAuth 2.0
+      - key: identity-levels
+        value: P0 (low), P5 (medium), P9 (high)
+
+  - name: Booking and Referral - FHIR API
+    description: >
+      Send booking and referral information between NHS service providers using
+      the NHS Booking and Referral Standard (BaRS). Enables sharing of clinical
+      and administrative data to support transfer of care.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir
+    baseURL: https://api.service.nhs.uk/booking-and-referral
+    tags:
+      - Booking
+      - Referral
+      - FHIR R4
+      - Transfer of Care
+      - BaRS
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+    meta:
+      - key: fhir-version
+        value: R4
+
+  - name: Organisation Data Service - FHIR API
+    description: >
+      Access a comprehensive dataset of NHS health and social care organisations
+      and sites. Retrieve organisation details by ODS code, search by name or
+      location, and access organisational hierarchy information for trusts,
+      GP practices, pharmacies, and other NHS sites.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/organisation-data-service-fhir
+    baseURL: https://api.service.nhs.uk/organisation-data-service
+    tags:
+      - Organisations
+      - ODS
+      - FHIR R4
+      - Reference Data
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/organisation-data-service-fhir
+      - type: OpenAPI
+        url: https://github.com/NHSDigital/organisation-data-service-fhir-api
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+
+  - name: NHS Website Content API
+    description: >
+      Retrieve NHS-approved health information content (conditions, medicines,
+      treatments, live well articles) for syndication into third-party apps and
+      services. Returns structured content with HTML and metadata. Rate limited
+      to 4,000 requests per hour by default.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/nhs-website-content
+    baseURL: https://api.service.nhs.uk/nhs-website-content
+    tags:
+      - Content
+      - Syndication
+      - Health Information
+      - REST
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/nhs-website-content
+      - type: TermsOfService
+        url: https://onboarding.prod.api.platform.nhs.uk/PolicyPages/TermsOfUsePolicy
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+    meta:
+      - key: rate-limit
+        value: 4000 requests per hour (default); higher limits by written agreement
+
+  - name: Spine Directory Service - FHIR API
+    description: >
+      Discover endpoint and accreditation information for NHS Spine-connected
+      organisations and systems. Used to look up messaging endpoints (ASID),
+      service interactions, and accredited systems within the NHS Spine network.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir
+    baseURL: https://api.service.nhs.uk/spine-directory
+    tags:
+      - Spine
+      - Directory
+      - FHIR
+      - Endpoints
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir
+      - type: OpenAPI
+        url: https://github.com/NHSDigital/spine-directory-service-api
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+
+  - name: NHS e-Referral Service - FHIR API
+    description: >
+      Access the NHS e-Referral Service (e-RS) to manage referrals between
+      primary and secondary care. Supports creating, retrieving, and updating
+      referral requests, managing appointment slots, and obtaining clinical
+      attachments for outpatient referrals.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
+    baseURL: https://api.service.nhs.uk/referrals
+    tags:
+      - Referrals
+      - e-Referral
+      - FHIR R4
+      - Secondary Care
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
+      - type: OpenAPI
+        url: https://github.com/NHSDigital/e-referrals-service-api
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+
+  - name: Elective Waiting List API
+    description: >
+      Access data from the NHS Waiting List Minimum Data Set (WLMDS), the
+      national electronic database of NHS patient waiting list records.
+      Supports performance monitoring and patient pathway management for
+      elective care.
+    image: https://digital.nhs.uk/svg/nhs-logo.svg
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/elective-waiting-list
+    baseURL: https://api.service.nhs.uk/elective-waiting-list
+    tags:
+      - Waiting Lists
+      - Elective Care
+      - REST
+    properties:
+      - type: Documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/elective-waiting-list
+    contact:
+      - FN: NHS England Developer Support
+        email: api.management@nhs.net
+
+common:
+  - type: Portal
+    url: https://digital.nhs.uk/developer
+  - type: APICatalogue
+    url: https://digital.nhs.uk/developer/api-catalogue
+  - type: Documentation
+    url: https://digital.nhs.uk/developer/guides-and-documentation
+  - type: Authentication
+    url: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation
+  - type: Onboarding
+    url: https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process
+  - type: DigitalAssurance
+    url: https://digital.nhs.uk/developer/assurance/digital-assurance-for-apis-and-services
+  - type: Community
+    url: https://developer.community.nhs.uk/
+  - type: GitHubOrg
+    url: https://github.com/NHSDigital
+  - type: APIPolicies
+    url: https://digital.nhs.uk/developer/guides-and-documentation/api-policies-and-best-practice
+  - type: TermsOfService
+    url: https://onboarding.prod.api.platform.nhs.uk/PolicyPages/TermsOfUsePolicy
+  - type: Status
+    url: https://status.digital.nhs.uk/
+  - type: RateLimits
+    url: /rate-limits/nhs-api-rate-limits.md
+  - type: Plans
+    url: /plans/nhs-api-plans.md
+  - type: FinOps
+    url: /finops/nhs-api-finops.md
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
