@@ -357,7 +357,7 @@ common:
     url: https://digital.nhs.uk/developer/guides-and-documentation
   - type: Authentication
     url: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation
-  - type: Onboarding
+  - type: GettingStarted
     url: https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process
   - type: DigitalAssurance
     url: https://digital.nhs.uk/developer/assurance/digital-assurance-for-apis-and-services
