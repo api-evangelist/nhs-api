@@ -349,6 +349,12 @@ apis:
         email: api.management@nhs.net
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/nhs-api-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/nhs-api-domain-security.yml
+  - type: Authentication
+    url: authentication/nhs-api-authentication.yml
   - type: Portal
     url: https://digital.nhs.uk/developer
   - type: APICatalogue
