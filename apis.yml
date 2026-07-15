@@ -349,6 +349,8 @@ apis:
         email: api.management@nhs.net
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/nhs-api-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/nhs-api-vulnerability-disclosure.yml
   - type: DomainSecurity
