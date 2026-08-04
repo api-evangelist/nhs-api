@@ -1,0 +1,28 @@
+{
+  "provider": "nhs-api",
+  "sources": [
+    "nhs-api-codesystem-api-openapi.yml",
+    "nhs-api-list-id-api-openapi.yml",
+    "nhs-api-metadata-api-openapi.yml",
+    "nhs-api-organization-api-openapi.yml",
+    "nhs-api-organizationaffiliation-api-openapi.yml",
+    "nhs-api-r4-api-openapi.yml",
+    "nhs-api-stu3-api-openapi.yml",
+    "nhs-api-valueset-api-openapi.yml"
+  ],
+  "outputs": [
+    "nhs-api-codesystem-api-openapi.yml",
+    "nhs-api-list-id-api-openapi.yml",
+    "nhs-api-metadata-api-openapi.yml",
+    "nhs-api-organization-api-openapi.yml",
+    "nhs-api-organizationaffiliation-api-openapi.yml",
+    "nhs-api-r4-api-openapi.yml",
+    "nhs-api-stu3-api-openapi.yml",
+    "nhs-api-valueset-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
