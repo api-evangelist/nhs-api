@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem List{id} API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List{id}",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get deletion notices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/List:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the business name for the List which contains details of deleted records\n"
+              }
+            ]
+          },
+          "docs": "## Overview\n\nUse this endpoint to check for any full record or partial record deletions. As these occur infrequently a full List of deletions will be provided. \nThere are four Lists which provide details of deletions that have occured within the ODS Data\n  * Organization-deletion\n  * OrganizationAffiliation-deletion\n  * Organization-role-deletion\n  * Organization-succession-deletion\n  \n  #### Organization-deletion\n  From time to time it is posible that we create or receive orgnisations which are"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

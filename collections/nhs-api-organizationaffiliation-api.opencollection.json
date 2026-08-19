@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem OrganizationAffiliation API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OrganizationAffiliation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get relationship details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/OrganizationAffiliation/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The relationship ID.\n"
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to a retrieve a single relationship record based on its unique identifier. This record describes a relationship between a pair of organisations. The types of relationships which an organisation may have will vary depending on the primary role of the organisation. In some case there may be multiple relationships between the same two organisations, each having a different relationship type. \n\nA FHIR OrganizationAffiliation Resource will be returned when a valid id is "
+        },
+        {
+          "info": {
+            "name": "Search for a relationship",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/Organizationaffiliation",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "The organisation's ID - also known as its ODS code. If you already know the ODS code, consider using the 'Get organsiation details' endpoint instead.\n"
+              },
+              {
+                "name": "primary-organisation",
+                "value": "",
+                "type": "query",
+                "description": "The ‘source’ organisation which has a relationship. \n\nreferred to as the SourceOrganisation in the ORD schema \n\nMust be a valid Organisation code with relationships to return results\n"
+              },
+              {
+                "name": "participating-organization",
+                "value": "",
+                "type": "query",
+                "description": "The ‘Target’ or related organisation.  \n\nReferred to as the Target Organisation in the ORD schema \nMust be a valid Organisation code with relationships to return results \n"
+              },
+              {
+                "name": "active",
+                "value": "",
+                "type": "query",
+                "description": "Whether the organisation's relationship record is still in active use."
+              },
+              {
+                "name": "_count",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return."
+              },
+              {
+                "name": "_include",
+                "value": "",
+                "type": "query",
+                "description": "Enables you return related resources.  \n\nOrganizationAffiliation:primary-organization will include Organization resource records for the ‘Source’ Organisations in the search results \n\nOrganizationAffiliation:participating-organization will include Organization resource records for all the ‘Target’ Organisations in the search results \n\nyou can include both primary and participating organization resources by including multiple `_include` parameters\n"
+              },
+              {
+                "name": "_summary",
+                "value": "",
+                "type": "query",
+                "description": "Return a count of the matching resources, without returning the actual matches."
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to search for relationship records. Most commonly you would use this endpoint to get all the relationships for a given organisation, based on its ODS code. \n\nFor relationships, this API returns the following details: \n\n  * related organisation ODS code \n  * relationship type and relationship name \n  * relationship legal start and end dates \n  * relationship operational start and end dates\n  \nyou can search using various combinations of:\n\n  * Primary-Organisation - k"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

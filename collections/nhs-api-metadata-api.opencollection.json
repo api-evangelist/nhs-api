@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem Metadata API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get capability statement",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/metadata"
+          },
+          "docs": "## Overview\nUse this endpoint to get a Capability Statement. A Capability Statement is a set of capabilities of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.\n\n[Needs updating]\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

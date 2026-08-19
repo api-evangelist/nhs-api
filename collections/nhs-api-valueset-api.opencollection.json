@@ -1,0 +1,52 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem ValueSet API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ValueSet",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Perform a ValueSet expansion",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/ValueSet/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "## Overview\nTo retrieve a subset of records from an individual CodeSystem, you will need to perform a 'POST' operation, in which you will provide the details of the CodeSystem you are searching, along with any filters to be applied and properties you wish to include in the results.\n\nWhen you make a 'POST' operation, you perform an expansion on a ValueSet and provide a requestBody. The endpoint will return a successful (200) response code along with the search results, which may be an empty array"
+        },
+        {
+          "info": {
+            "name": "Get value set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/ValueSet/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The id for the ValueSet.\n"
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to get a single ValueSet for the specified ID.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

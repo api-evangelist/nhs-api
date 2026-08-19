@@ -1,0 +1,170 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem Organization API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Organization",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for an organisation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/Organization",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "The organisation’s ODS code.  \n\nIf you already know the ODS code, use the `Get organisation details` endpoint instead.\n"
+              },
+              {
+                "name": "identifier",
+                "value": "",
+                "type": "query",
+                "description": "The organisation's ODS code.  \n\nThis parameter is similar to `_id` but can also explicitly include the CodeSystem for the ID - which must be `ods-organization-code`.  \n\nIt's included for FHIR compatibility. \n"
+              },
+              {
+                "name": "lastChangeDate",
+                "value": "",
+                "type": "query",
+                "description": "The date that the organisation record was last modified by ODS. Supports greater than, less and equal to. Can be compounded."
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "The start of the organisation's name. For example, `Leeds` would match `Leeds Chest Clinic` but not `South Leeds Clinical Assessment Service`.\n\nTo search anywhere in the organisation's name, use `name:contains`. To search for an exact match, use `name:exact`.\n\nNot case sensitive.\n\nSearch expressions must:\n- contain a minimum of 3 characters and a maximum of 100 characters\n- only include the following characters: A-Z a-z 0-9 &()’+-_./:@ 'Space'\n"
+              },
+              {
+                "name": "name:contains",
+                "value": "",
+                "type": "query",
+                "description": "Any part of the organisation's name. For example, `Leeds` would match `Leeds Chest Clinic` and `South Leeds Clinical Assessment Service`.\n\nNot case sensitive.\n\nSearch expressions must:\n- contain a minimum of 3 characters and a maximum of 100 characters\n- only include the following characters: A-Z a-z 0-9 &()’+-_./:@ 'Space'\n"
+              },
+              {
+                "name": "name:exact",
+                "value": "",
+                "type": "query",
+                "description": "The exact organisation name.\n\nCase sensitive.\n\nSearch expressions must:\n- contain a minimum of 3 characters and a maximum of 100 characters\n- only include the following characters: A-Z a-z 0-9 &()’+-_./:@ 'Space'\n"
+              },
+              {
+                "name": "active",
+                "value": "",
+                "type": "query",
+                "description": "Whether the organisation's record is still in active use."
+              },
+              {
+                "name": "address-postalcode",
+                "value": "",
+                "type": "query",
+                "description": "The start of the organisation's postcode.\n\nTo search anywhere in the postcode, use `address-postalcode:contains`. To search for an exact match, use `address-postalcode:exact`.\n\nNot case sensitive.\n\nSearch expressions must:\n- contain a minimum of 2 characters\n- only include alphanumeric characters and spaces\n"
+              },
+              {
+                "name": "address-postalcode:contains",
+                "value": "",
+                "type": "query",
+                "description": "Any part of the organisation's postcode.\n\nNot case sensitive.\n\nSearch expressions must:\n- contain a minimum of 2 characters\n- only include alphanumeric characters and spaces\n"
+              },
+              {
+                "name": "address-postalcode:exact",
+                "value": "",
+                "type": "query",
+                "description": "The exact organisation postcode.\n\nCase sensitive.\n\nSearch expressions must:\n- contain a minimum of 2 characters\n- only include alphanumeric characters and spaces\n"
+              },
+              {
+                "name": "address-city",
+                "value": "",
+                "type": "query",
+                "description": "The start of the organisation's city address.\n\nTo search anywhere in the city address, use `address-city:contains`. To search for an exact match, use `address-city:exact`.\n\nNot case sensitive.\n\nSearch expressions must:\n- contain a minimum of 2 characters\n- only include alphanumeric characters and spaces\n"
+              },
+              {
+                "name": "address-city:contains",
+                "value": "",
+                "type": "query",
+                "description": "Any part of the organisation's city address.\n\nNot case sensitive.\n\nSearch expressions must:\n- contain a minimum of 2 characters\n- only include alphanumeric characters and spaces\n"
+              },
+              {
+                "name": "address-city:exact",
+                "value": "",
+                "type": "query",
+                "description": "The exact organisation city address.\n\nCase sensitive.\n\nSearch expressions must:\n- contain a minimum of 2 characters\n- only include alphanumeric characters and spaces\n"
+              },
+              {
+                "name": "address-country",
+                "value": "",
+                "type": "query",
+                "description": "The start of the  organisation's country.\n\nNot case sensitive.\n\nTo search anywhere in the country address, use `address-country:contains`. To search for an exact match, use `address-country:exact`.\n\nSearch expressions must:\n- contain a minimum of 2 characters\n- only include alphanumeric characters and spaces\n"
+              },
+              {
+                "name": "roleCode",
+                "value": "",
+                "type": "query",
+                "description": "The organisation's role, based on the `ODSOrganisationRole` CodeSystem.\n\nAn organisation in ODS can have one or many roles.\n\nTo exclude organisations with a specific role use `roleCode:not` \n\nTo search for organisations that have multiple roles (like an 'AND' operator), include the `roleCode` query parameter multiple times. \n\nTo search for organisations that have one of several roles (like an 'OR' operator), use a comma separator. \n\nYou may combine 'AND' and 'OR' searches.\n\nTo discover whether a role is primary or non-primary, refer to the `ODSOrganisationRelationship` CodeSystem \n"
+              },
+              {
+                "name": "roleCode:not",
+                "value": "",
+                "type": "query",
+                "description": "Exclude organisations from the search results based on their role \n"
+              },
+              {
+                "name": "activeRoleCode",
+                "value": "",
+                "type": "query",
+                "description": "Searches only active roles within the `ODSOrganisationRole` CodeSystem \n\nTo exclude organisations with a specific role use `activeRoleCode:not` \nTo search for organisations that have multiple roles (like an 'AND' operator), include the `activeRoleCode` query parameter multiple times. \n\nTo search for organisations that have one of several roles (like an 'OR' operator), use a comma separator. \n\nYou may combine 'AND' and 'OR' searches.\n\nTo discover whether a role is primary or non-primary, refer to the `ODSOrganisationRelationship` CodeSystem \n"
+              },
+              {
+                "name": "_count",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return."
+              },
+              {
+                "name": "_summary",
+                "value": "",
+                "type": "query",
+                "description": "Return a count of the matching resources, without returning the actual matches."
+              },
+              {
+                "name": "_offset",
+                "value": "",
+                "type": "query",
+                "description": "When used with _count, enables paging through large result sets"
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to search for organisations or sites. Site codes which are supported for certain organisations can also be accessed here, there is no separate endpoint for sites. \n\nA FHIR Organization resource will be provided for each search result.\n\nYou can search for information about an organisation using one or more of their: \n\n  * ODS code \n  * last change date \n  * name \n  * active or inactive status \n  * address, city or postcode  \n  * organisation's primary role using Role"
+        },
+        {
+          "info": {
+            "name": "Get organisation details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/Organization/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The organisation's ODS code.\n"
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to get details for a single organisation based on its ODS code. Site codes which are supported for certain organisations can also be accessed here, there is not a separate endpoint for sites. A FHIR Organization resource will be provided when a valid id has been provided. \n\n\n## What is included    \nThis API returns the following details for an organisation: \n\n  * organisation - ODS code, name, last change date, status if active or inactive , record class (organisati"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,348 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem STU3 API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "STU3",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /STU3/CodeSystem/{codeSystemType}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/CodeSystem/:codeSystemType"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/$ers.fetchworklist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/$ers.fetchworklist"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/ReferralRequest/{ubrn}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Task"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/ReferralRequest/{ubrn}/_history/{version}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/_history/:version"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/Binary/{attachmentLogicalID}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Binary/:attachmentLogicalID"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.generateCRI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.generateCRI"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/HealthcareService/$ers.searchHealthcareServicesForPatient",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/HealthcareService/$ers.searchHealthcareServicesForPatient"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/$ers.createReferral",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/$ers.createReferral"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/$ers.createReferralAndSendForTriage",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/$ers.createReferralAndSendForTriage"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/Slot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Slot"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/Appointment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Appointment"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/Binary",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Binary"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.maintainReferralLetter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.maintainReferralLetter"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.acceptReferral",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.acceptReferral"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.rejectReferral",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.rejectReferral"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.generatePatientLetter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.generatePatientLetter"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.cancelAppointmentActionLater",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.cancelAppointmentActionLater"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/CommunicationRequest/$ers.fetchworklist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/CommunicationRequest/$ers.fetchworklist"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/CommunicationRequest/{ubrn}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/CommunicationRequest/:ubrn"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/CommunicationRequest/{ubrn}/_history/{version}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/CommunicationRequest/:ubrn/_history/:version"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/Communication",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Communication"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/CommunicationRequest/{ubrn}/$ers.sendCommunicationToRequester",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/CommunicationRequest/:ubrn/$ers.sendCommunicationToRequester"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/$ers.createFromCommunicationRequestActionLater",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/$ers.createFromCommunicationRequestActionLater"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.recordReviewOutcome",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.recordReviewOutcome"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.changeShortlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.changeShortlist"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.changeShortlistAndSendForTriage",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.changeShortlistAndSendForTriage"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/Appointment/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Appointment/:id"
+          }
+        },
+        {
+          "info": {
+            "name": "PUT /STU3/Appointment/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Appointment/:id"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /STU3/Appointment/{id}/_history/{version}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/Appointment/:id/_history/:version"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/ReferralRequest/{ubrn}/$ers.cancelReferral",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/ReferralRequest/:ubrn/$ers.cancelReferral"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/CommunicationRequest/{ubrn}/$ers.generateCRI",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/CommunicationRequest/:ubrn/$ers.generateCRI"
+          }
+        },
+        {
+          "info": {
+            "name": "POST /STU3/CommunicationRequest/$ers.createAdviceAndGuidance",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/STU3/CommunicationRequest/$ers.createAdviceAndGuidance"
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

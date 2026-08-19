@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CodeSystem",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for additional instance and reference data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/CodeSystem/",
+            "params": [
+              {
+                "name": "system",
+                "value": "",
+                "type": "query",
+                "description": "The Unique Resource Indicator (URI) of the codesystem\n"
+              },
+              {
+                "name": "code",
+                "value": "",
+                "type": "query",
+                "description": "The code of the concept stored within the CodeSystem  \n"
+              },
+              {
+                "name": "property",
+                "value": "",
+                "type": "query",
+                "description": "Include all or specific properties from a CodeSystem. \n\nTo return all use asterisk ‘*’ \n\nTo return multiple properties, include each one as a separate parameter \n"
+              },
+              {
+                "name": "_summmary",
+                "value": "",
+                "type": "query",
+                "description": "override default behaviour to retreive a subset of the CodeSystem content when searching.\n\n  `data` and `false` will generate errors on larger CodeSystems.\n"
+              }
+            ]
+          },
+          "docs": "## Overview \n\nUse this endpoint to access a range of information contained in CodeSystems to meet your needs. We have CodeSystems that contain regularly changing data such as organisations, practitioners and relationships plus more traditional reference based CodeSystems.\n\nCodeSystem names include the date when they were last updated i.e. `ods-organization-code-2024-03-07` so when searching for individual concepts (records within the CodeSystem) it is necessary to perform a search using a `$look"
+        },
+        {
+          "info": {
+            "name": "Get code system",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/CodeSystem/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The ID for a Code System\n"
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to get a single Code System for a specified ID.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "e-Referrals Service CodeSystem R4 API",
+    "version": "0.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "R4",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /R4/Binary/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/R4/Binary/:id"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /R4/PractitionerRole",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/R4/PractitionerRole"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /R4/HealthcareService/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/R4/HealthcareService/:id"
+          }
+        },
+        {
+          "info": {
+            "name": "HEAD /R4/HealthcareService/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/R4/HealthcareService/:id"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /R4/HealthcareService",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/R4/HealthcareService"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /R4/Practitioner",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/R4/Practitioner"
+          }
+        },
+        {
+          "info": {
+            "name": "GET /R4/ServiceRequest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/referrals/FHIR/R4/ServiceRequest"
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
