@@ -87,6 +87,12 @@ apis:
   - Referral
   - FHIR R4
   - Transfer of Care
+  - Bars
+  tags_raw:
+  - Booking
+  - Referral
+  - FHIR R4
+  - Transfer of Care
   - BaRS
   properties:
   - type: Documentation
@@ -177,6 +183,8 @@ apis:
   humanURL: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
   baseURL: https://api.service.nhs.uk/personal-demographics
   tags:
+  - List_id
+  tags_raw:
   - List{id}
   properties:
   - type: OpenAPI
