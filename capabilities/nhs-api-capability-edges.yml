@@ -11,16 +11,28 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 1
+edge_count: 2
 edges:
 - tag: STU3
   spec_file: nhs-api-stu3-api-openapi.yml
   capability_id: BC-2820.10
   capability_id_l1: BC-2820
   capability_name: Referral Management
-  confidence: 0.85
-  evidence: '"POST /STU3/ReferralRequest/$ers.createReferral", "POST /STU3/ReferralRequest/$ers.fetchworklist",
-    "POST /STU3/ReferralRequest/$ers.createReferralAndSendForTriage"'
-  reason: Operations create, triage, track and worklist referrals from primary to secondary care, which
-    is end-to-end referral management; appointment/slot booking here is a step within the referral pathway
-    rather than a separate scheduling product.
+  confidence: 0.9
+  evidence: POST /STU3/ReferralRequest/$ers.createReferral; POST /STU3/ReferralRequest/$ers.createReferralAndSendForTriage;
+    POST /STU3/ReferralRequest/$ers.fetchworklist
+  reason: Despite the opaque version tag, the operations plainly create, triage, worklist and retrieve
+    e-referrals from primary to secondary care — end-to-end referral management. Appointment booking operations
+    are present but subordinate to the referral workflow.
+- tag: R4
+  spec_file: nhs-api-r4-api-openapi.yml
+  capability_id: BC-2820.10
+  capability_id_l1: BC-2820
+  capability_name: Referral Management
+  confidence: 0.75
+  evidence: '"Use this API to create paperless referrals from primary to secondary care with the e-Referral
+    Service (e-RS)"; GET /R4/ServiceRequest'
+  reason: Tag is a FHIR-version namespace on the e-Referrals Service; operations retrieve ServiceRequest
+    (the referral resource) plus the practitioner and healthcare-service directory used to shortlist referral
+    targets. That is referral management. Slight discount because the listed R4 operations are mostly
+    supporting directory lookups with no summaries.
