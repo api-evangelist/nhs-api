@@ -8,6 +8,18 @@ description: >
   and content syndication. APIs are managed via NHS England's Apigee-based
   API platform and are targeted at system suppliers, NHS organisations, and
   accredited third-party healthcare application developers.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
