@@ -1,0 +1,26 @@
+slug: nhs-api
+provider: NHS API
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Healthcare Providers
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: STU3
+  spec_file: nhs-api-stu3-api-openapi.yml
+  capability_id: BC-2820.10
+  capability_id_l1: BC-2820
+  capability_name: Referral Management
+  confidence: 0.85
+  evidence: '"POST /STU3/ReferralRequest/$ers.createReferral", "POST /STU3/ReferralRequest/$ers.fetchworklist",
+    "POST /STU3/ReferralRequest/$ers.createReferralAndSendForTriage"'
+  reason: Operations create, triage, track and worklist referrals from primary to secondary care, which
+    is end-to-end referral management; appointment/slot booking here is a step within the referral pathway
+    rather than a separate scheduling product.

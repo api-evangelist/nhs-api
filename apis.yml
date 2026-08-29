@@ -417,6 +417,9 @@ apis:
   - type: Documentation
     url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
 common:
+  - type: CapabilityMap
+    url: capabilities/nhs-api-capability-edges.yml
+    name: NHS API Business Capability Map
   - type: AgenticAccess
     url: agentic-access/nhs-api-agentic-access.yml
   - type: VulnerabilityDisclosure
