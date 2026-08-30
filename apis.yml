@@ -99,7 +99,7 @@ apis:
   - Referral
   - FHIR R4
   - Transfer of Care
-  - Bars
+  - BaRS
   tags_raw:
   - Booking
   - Referral
