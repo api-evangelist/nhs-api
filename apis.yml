@@ -38,6 +38,17 @@ tags:
   - Healthcare
   - FHIR
   - NHS
+  - United Kingdom
+  - HL7
+  - Electronic Prescriptions
+  - Patient Demographics
+  - GP Connect
+  - NHS Login
+  - Interoperability
+tags_raw:
+  - Healthcare
+  - FHIR
+  - NHS
   - UK
   - HL7
   - Electronic Prescriptions
@@ -97,7 +108,7 @@ apis:
   baseURL: https://api.service.nhs.uk/booking-and-referral
   tags:
   - Booking
-  - Referral
+  - Referrals
   - FHIR R4
   - Transfer of Care
   - Bars
