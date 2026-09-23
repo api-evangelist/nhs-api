@@ -92,7 +92,8 @@
     "tag 'CodeSystem' spans 2 source specs (organisation-data-service-fhir-r4-api.yaml, organisation-data-service-fhir-stu3-api.yaml): per-path servers applied",
     "tag 'Metadata' spans 2 source specs (organisation-data-service-fhir-r4-api.yaml, organisation-data-service-fhir-stu3-api.yaml): per-path servers applied",
     "tag 'Organization' spans 2 source specs (organisation-data-service-fhir-r4-api.yaml, organisation-data-service-fhir-stu3-api.yaml): per-path servers applied",
-    "tag 'ValueSet' spans 2 source specs (organisation-data-service-fhir-r4-api.yaml, organisation-data-service-fhir-stu3-api.yaml): per-path servers applied"
+    "tag 'ValueSet' spans 2 source specs (organisation-data-service-fhir-r4-api.yaml, organisation-data-service-fhir-stu3-api.yaml): per-path servers applied",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "nhs-api-codesystem-api-openapi.yml: previously refined output, superseded by openapi/_original/",

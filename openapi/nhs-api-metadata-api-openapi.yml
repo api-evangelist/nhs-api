@@ -28,9 +28,7 @@ paths:
         Use this endpoint to get a Capability Statement. A Capability Statement is a set of capabilities of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
 
 
-        [Needs updating]
-
-        '
+        [Needs updating]'
       responses:
         '200':
           description: Retrieved the Capability Statement from the FHIR Server

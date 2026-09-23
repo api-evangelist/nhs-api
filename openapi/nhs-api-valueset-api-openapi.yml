@@ -23,7 +23,12 @@ paths:
     post:
       summary: Perform a ValueSet expansion
       operationId: search-ods-organization-code
-      description: "## Overview\nTo retrieve a subset of records from an individual CodeSystem, you will need to perform a 'POST' operation, in which you will provide the details of the CodeSystem you are searching, along with any filters to be applied and properties you wish to include in the results.\n\nWhen you make a 'POST' operation, you perform an expansion on a ValueSet and provide a requestBody. The endpoint will return a successful (200) response code along with the search results, which may be an empty array if no records match your criteria. or an unsuccesful (4xx/5xx) response.\n\n    \n \n"
+      description: '## Overview
+
+        To retrieve a subset of records from an individual CodeSystem, you will need to perform a ''POST'' operation, in which you will provide the details of the CodeSystem you are searching, along with any filters to be applied and properties you wish to include in the results.
+
+
+        When you make a ''POST'' operation, you perform an expansion on a ValueSet and provide a requestBody. The endpoint will return a successful (200) response code along with the search results, which may be an empty array if no records match your criteria. or an unsuccesful (4xx/5xx) response.'
       requestBody:
         content:
           application/fhir+json:
@@ -127,9 +132,7 @@ paths:
       operationId: get-valueset-specified-id
       description: '## Overview
 
-        Use this endpoint to get a single ValueSet for the specified ID.
-
-        '
+        Use this endpoint to get a single ValueSet for the specified ID.'
       parameters:
       - in: path
         name: id
