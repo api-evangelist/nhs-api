@@ -109,7 +109,7 @@ apis:
   tags:
   - Booking
   - Referrals
-  - FHIR R4
+  - FHIR
   - Transfer of Care
   - Bars
   tags_raw:
