@@ -463,12 +463,6 @@ common:
     url: https://onboarding.prod.api.platform.nhs.uk/PolicyPages/TermsOfUsePolicy
   - type: Status
     url: https://status.digital.nhs.uk/
-  - type: RateLimits
-    url: /rate-limits/nhs-api-rate-limits.md
-  - type: Plans
-    url: /plans/nhs-api-plans.md
-  - type: FinOps
-    url: /finops/nhs-api-finops.md
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
