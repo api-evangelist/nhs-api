@@ -1,23 +1,25 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/e-referrals-service-api.yaml, openapi/organisation-data-service-fhir-r4-api.yaml,
-  openapi/organisation-data-service-fhir-stu3-api.yaml
+source: openapi/nhs-api-codesystem-api-openapi.yml, openapi/nhs-api-list-id-api-openapi.yml,
+  openapi/nhs-api-metadata-api-openapi.yml, openapi/nhs-api-organization-api-openapi.yml, openapi/nhs-api-organizationaffiliation-api-openapi.yml,
+  openapi/nhs-api-r4-api-openapi.yml, openapi/nhs-api-stu3-api-openapi.yml, openapi/nhs-api-valueset-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
-  operations: 53
+  operations: 50
   by_action_class:
-    connected: 30
-    acting: 23
+    connected: 28
+    acting: 22
   by_consequence:
-    read: 30
-    write: 20
+    read: 28
+    write: 19
     physical: 3
   human_in_the_loop_required: 0
 operations:
-- path: /STU3/CodeSystem/{codeSystemType}
+- path: /CodeSystem/
   method: get
+  operationId: search-codesystem
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -25,23 +27,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /STU3/ReferralRequest/$ers.fetchworklist
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}
+- path: /CodeSystem/{id}
   method: get
+  operationId: get-codesystem-id
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -49,8 +37,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /STU3/Task
+- path: /List{id}
   method: get
+  operationId: get-deletion-notices
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -58,455 +47,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /STU3/ReferralRequest/{ubrn}/_history/{version}
+- path: /metadata
   method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/Binary/{attachmentLogicalID}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /R4/Binary/{id}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/ReferralRequest/{ubrn}/$ers.generateCRI
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/HealthcareService/$ers.searchHealthcareServicesForPatient
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/$ers.createReferral
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/$ers.createReferralAndSendForTriage
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/Slot
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/Appointment
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/Binary
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}/$ers.maintainReferralLetter
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}/$ers.acceptReferral
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}/$ers.rejectReferral
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}/$ers.generatePatientLetter
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}/$ers.cancelAppointmentActionLater
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/CommunicationRequest/$ers.fetchworklist
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/CommunicationRequest/{ubrn}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/CommunicationRequest/{ubrn}/_history/{version}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/Communication
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/CommunicationRequest/{ubrn}/$ers.sendCommunicationToRequester
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/$ers.createFromCommunicationRequestActionLater
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}/$ers.recordReviewOutcome
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /R4/PractitionerRole
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/ReferralRequest/{ubrn}/$ers.changeShortlist
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/ReferralRequest/{ubrn}/$ers.changeShortlistAndSendForTriage
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /R4/HealthcareService/{id}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /R4/HealthcareService/{id}
-  method: head
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/Appointment/{id}
-  method: put
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/Appointment/{id}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/Appointment/{id}/_history/{version}
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /R4/HealthcareService
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/ReferralRequest/{ubrn}/$ers.cancelReferral
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /R4/Practitioner
-  method: get
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /STU3/CommunicationRequest/{ubrn}/$ers.generateCRI
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /STU3/CommunicationRequest/$ers.createAdviceAndGuidance
-  method: post
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /R4/ServiceRequest
-  method: get
+  operationId: get-capability-statement
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -517,16 +60,6 @@ operations:
 - path: /Organization
   method: get
   operationId: get-organization-resources
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /Organizationaffiliation
-  method: get
-  operationId: get-organizationaffiliation-resources
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -554,9 +87,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /List{id}
+- path: /Organizationaffiliation
   method: get
-  operationId: get-deletion-notices
+  operationId: get-organizationaffiliation-resources
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -564,9 +97,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /CodeSystem/
+- path: /R4/Binary/{id}
   method: get
-  operationId: search-codesystem
+  operationId: getR4BinaryById
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -574,9 +107,79 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /ValueSet/
+- path: /R4/PractitionerRole
+  method: get
+  operationId: getR4PractitionerRole
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /R4/HealthcareService/{id}
+  method: get
+  operationId: getR4HealthcareServiceById
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /R4/HealthcareService/{id}
+  method: head
+  operationId: headR4HealthcareServiceById
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /R4/HealthcareService
+  method: get
+  operationId: getR4HealthcareService
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /R4/Practitioner
+  method: get
+  operationId: getR4Practitioner
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /R4/ServiceRequest
+  method: get
+  operationId: getR4ServiceRequest
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/CodeSystem/{codeSystemType}
+  method: get
+  operationId: getSTU3CodeSystemByCodeSystemType
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/ReferralRequest/$ers.fetchworklist
   method: post
-  operationId: search-ods-organization-code
+  operationId: postSTU3ReferralRequest$ersFetchworklist
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -590,9 +193,9 @@ operations:
       - abnormal
       - high-value
     audit: required
-- path: /metadata
+- path: /STU3/ReferralRequest/{ubrn}
   method: get
-  operationId: get-capability-statement
+  operationId: getSTU3ReferralRequestByUbrn
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -600,9 +203,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /Organization
+- path: /STU3/Task
   method: get
-  operationId: get-organization-resources
+  operationId: getSTU3Task
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -610,9 +213,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /Organization/{id}
+- path: /STU3/ReferralRequest/{ubrn}/_history/{version}
   method: get
-  operationId: get-single-organization
+  operationId: getSTU3ReferralRequestByUbrnHistoryByVersion
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -620,9 +223,421 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /metadata
+- path: /STU3/Binary/{attachmentLogicalID}
   method: get
-  operationId: get-capability-statement
+  operationId: getSTU3BinaryByAttachmentLogicalID
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/ReferralRequest/{ubrn}/$ers.generateCRI
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersGenerateCRI
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/HealthcareService/$ers.searchHealthcareServicesForPatient
+  method: post
+  operationId: postSTU3HealthcareService$ersSearchHealthcareServicesForPatient
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/$ers.createReferral
+  method: post
+  operationId: postSTU3ReferralRequest$ersCreateReferral
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/$ers.createReferralAndSendForTriage
+  method: post
+  operationId: postSTU3ReferralRequest$ersCreateReferralAndSendForTriage
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/Slot
+  method: get
+  operationId: getSTU3Slot
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/Appointment
+  method: post
+  operationId: postSTU3Appointment
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/Binary
+  method: post
+  operationId: postSTU3Binary
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.maintainReferralLetter
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersMaintainReferralLetter
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.acceptReferral
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersAcceptReferral
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.rejectReferral
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersRejectReferral
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.generatePatientLetter
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersGeneratePatientLetter
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.cancelAppointmentActionLater
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersCancelAppointmentActionLater
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/CommunicationRequest/$ers.fetchworklist
+  method: post
+  operationId: postSTU3CommunicationRequest$ersFetchworklist
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/CommunicationRequest/{ubrn}
+  method: get
+  operationId: getSTU3CommunicationRequestByUbrn
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/CommunicationRequest/{ubrn}/_history/{version}
+  method: get
+  operationId: getSTU3CommunicationRequestByUbrnHistoryByVersion
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/Communication
+  method: get
+  operationId: getSTU3Communication
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/CommunicationRequest/{ubrn}/$ers.sendCommunicationToRequester
+  method: post
+  operationId: postSTU3CommunicationRequestByUbrn$ersSendCommunicationToRequester
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/$ers.createFromCommunicationRequestActionLater
+  method: post
+  operationId: postSTU3ReferralRequest$ersCreateFromCommunicationRequestActionLater
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.recordReviewOutcome
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersRecordReviewOutcome
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.changeShortlist
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersChangeShortlist
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/ReferralRequest/{ubrn}/$ers.changeShortlistAndSendForTriage
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersChangeShortlistAndSendForTriage
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/Appointment/{id}
+  method: put
+  operationId: putSTU3AppointmentById
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/Appointment/{id}
+  method: get
+  operationId: getSTU3AppointmentById
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/Appointment/{id}/_history/{version}
+  method: get
+  operationId: getSTU3AppointmentByIdHistoryByVersion
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /STU3/ReferralRequest/{ubrn}/$ers.cancelReferral
+  method: post
+  operationId: postSTU3ReferralRequestByUbrn$ersCancelReferral
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/CommunicationRequest/{ubrn}/$ers.generateCRI
+  method: post
+  operationId: postSTU3CommunicationRequestByUbrn$ersGenerateCRI
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /STU3/CommunicationRequest/$ers.createAdviceAndGuidance
+  method: post
+  operationId: postSTU3CommunicationRequest$ersCreateAdviceAndGuidance
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /ValueSet/
+  method: post
+  operationId: search-ods-organization-code
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -633,16 +648,6 @@ operations:
 - path: /ValueSet/{id}
   method: get
   operationId: get-valueset-specified-id
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /CodeSystem/{id}
-  method: get
-  operationId: get-codesystem-id
   x-agentic-access:
     action-class: connected
     consequence: read
