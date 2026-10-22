@@ -1,0 +1,359 @@
+edges:
+- partner_name: UK Government API Catalogue (CDDO)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  channel: standard-directory
+  relationship: standard-participant
+  evidence: https://raw.githubusercontent.com/co-cddo/api-catalogue/main/data/catalogue.csv
+  match:
+    method: domain+name-among-holders
+    domains:
+    - digital.nhs.uk
+  register_listing:
+    publisher: nhs-digital
+    apis:
+    - name: Access Control Service HL7 V3 API
+      url: https://digital.nhs.uk/developer/api-catalogue/access-control-service-hl7-v3
+      documentation: https://digital.nhs.uk/developer/api-catalogue/access-control-service-hl7-v3
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Alerts - HL7 V3 API
+      url: https://digital.nhs.uk/developer/api-catalogue/alerts-hl7-v3
+      documentation: https://digital.nhs.uk/developer/api-catalogue/alerts-hl7-v3
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Ambulance Data Submission - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/ambulance-data-submission-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/ambulance-data-submission-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Booking and Referral - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Child Protection - Information Sharing - HL7 V3 API
+      url: https://digital.nhs.uk/developer/api-catalogue/child-protection-information-sharing-hl7-v3
+      documentation: https://digital.nhs.uk/developer/api-catalogue/child-protection-information-sharing-hl7-v3
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: COVID-19 Test Results - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/covid-19-test-results-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/covid-19-test-results-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Cyber Alerts - REST API
+      url: https://digital.nhs.uk/developer/api-catalogue/cyber-alerts-rest
+      documentation: https://digital.nhs.uk/developer/api-catalogue/cyber-alerts-rest
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Data Registers Service - REST API
+      url: https://digital.nhs.uk/developer/api-catalogue/data-registers-service-rest
+      documentation: https://digital.nhs.uk/developer/api-catalogue/data-registers-service-rest
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Directory of Healthcare Services (Service Search) API
+      url: https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services
+      documentation: https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Directory of Services - Urgent and Emergency Care - REST API
+      url: https://digital.nhs.uk/developer/api-catalogue/directory-of-services-urgent-and-emergency-care-rest
+      documentation: https://digital.nhs.uk/developer/api-catalogue/directory-of-services-urgent-and-emergency-care-rest
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Directory of Services - Urgent and Emergency Care - SOAP API
+      url: https://digital.nhs.uk/developer/api-catalogue/directory-of-services-soap
+      documentation: https://digital.nhs.uk/developer/api-catalogue/directory-of-services-soap
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Electronic Prescription Service Directory of Services API
+      url: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-directory-of-services
+      documentation: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-directory-of-services
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Electronic Prescription Service - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Electronic Prescription Service - HL7 V3 API
+      url: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-hl7-v3
+      documentation: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-hl7-v3
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Electronic Prescription Service Tracker - REST API
+      url: https://digital.nhs.uk/developer/api-catalogue/spine-electronic-prescription-service-tracker-rest
+      documentation: https://digital.nhs.uk/developer/api-catalogue/spine-electronic-prescription-service-tracker-rest
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Electronic Transmission of Prescriptions Web Services - SOAP API
+      url: https://digital.nhs.uk/developer/api-catalogue/electronic-transmission-of-prescriptions-web-services-soap
+      documentation: https://digital.nhs.uk/developer/api-catalogue/electronic-transmission-of-prescriptions-web-services-soap
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: e-Referral Service - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: e-Referral Service - FHIR API (HSCN)
+      url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir-hscn
+      documentation: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir-hscn
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: e-Referral Service - HL7 V3 API
+      url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-hl7-v3
+      documentation: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-hl7-v3
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: e-Referral Service Patient Care – FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-patient-care-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-patient-care-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Female Genital Mutilation - Information Sharing - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/female-genital-mutilation-information-sharing-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/female-genital-mutilation-information-sharing-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: FHIR Converter API
+      url: https://digital.nhs.uk/developer/api-catalogue/fhir-converter
+      documentation: https://digital.nhs.uk/developer/api-catalogue/fhir-converter
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Gazetteer Service - SOAP API
+      url: https://digital.nhs.uk/developer/api-catalogue/gazetteer-service-soap
+      documentation: https://digital.nhs.uk/developer/api-catalogue/gazetteer-service-soap
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: GP Registrations Management Information API
+      url: https://digital.nhs.uk/developer/api-catalogue/gp-registrations-management-information
+      documentation: https://digital.nhs.uk/developer/api-catalogue/gp-registrations-management-information
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Health Research Data Catalogue API
+      url: https://digital.nhs.uk/developer/api-catalogue/health-research-data-catalogue
+      documentation: https://digital.nhs.uk/developer/api-catalogue/health-research-data-catalogue
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Hello World API
+      url: https://digital.nhs.uk/developer/api-catalogue/hello-world
+      documentation: https://digital.nhs.uk/developer/api-catalogue/hello-world
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Immunisation History - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/immunisation-history-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/immunisation-history-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Message Exchange for Social Care and Health (MESH) API
+      url: https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api
+      documentation: https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: National Data Opt-out - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/national-data-opt-out-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/national-data-opt-out-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: National Event Management Service - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/national-events-management-service-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/national-events-management-service-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: National Record Locator - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: NHS App API
+      url: https://digital.nhs.uk/developer/api-catalogue/nhs-app
+      documentation: https://digital.nhs.uk/developer/api-catalogue/nhs-app
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: NHS Booking - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/nhs-booking-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/nhs-booking-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: NHS CIS2 Care Identity Authentication API
+      url: https://digital.nhs.uk/developer/api-catalogue/nhs-cis2-care-identity-authentication
+      documentation: https://digital.nhs.uk/developer/api-catalogue/nhs-cis2-care-identity-authentication
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: NHS CIS Authentication (Spine Security Broker) API
+      url: https://digital.nhs.uk/developer/api-catalogue/nhs-cis-authentication-spine-security-broker
+      documentation: https://digital.nhs.uk/developer/api-catalogue/nhs-cis-authentication-spine-security-broker
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: NHS login API
+      url: https://digital.nhs.uk/developer/api-catalogue/nhs-login
+      documentation: https://digital.nhs.uk/developer/api-catalogue/nhs-login
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Ophthalmic Payments API
+      url: https://digital.nhs.uk/developer/api-catalogue/ophthalmic-payments
+      documentation: https://digital.nhs.uk/developer/api-catalogue/ophthalmic-payments
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Ordnance Survey Places API
+      url: https://digital.nhs.uk/developer/api-catalogue/ordnance-survey-places-api
+      documentation: https://digital.nhs.uk/developer/api-catalogue/ordnance-survey-places-api
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Organisation Data Service - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/organisation-data-service-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/organisation-data-service-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Organisation Data Service - ORD API
+      url: https://digital.nhs.uk/developer/api-catalogue/organisation-data-service-ord
+      documentation: https://digital.nhs.uk/developer/api-catalogue/organisation-data-service-ord
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Patient Care Aggregator - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/patient-care-aggregator-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/patient-care-aggregator-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Patient Care Aggregator Record Service API
+      url: https://digital.nhs.uk/developer/api-catalogue/patient-care-aggregator-record-service/patient-care-aggregator-record-service-api
+      documentation: https://digital.nhs.uk/developer/api-catalogue/patient-care-aggregator-record-service/patient-care-aggregator-record-service-api
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Personal Demographics Service - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Personal Demographics Service - HL7 V3 API
+      url: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-hl7-v3
+      documentation: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-hl7-v3
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Personal Demographics Service - SMSP API
+      url: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp
+      documentation: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-smsp
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Query Accredited System Information - SOAP API
+      url: https://digital.nhs.uk/developer/api-catalogue/query-accredited-system-information-soap
+      documentation: https://digital.nhs.uk/developer/api-catalogue/query-accredited-system-information-soap
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Reasonable Adjustment Flag - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/reasonable-adjustment-flag-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/reasonable-adjustment-flag-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Signing Service API
+      url: https://digital.nhs.uk/developer/api-catalogue/signing-service
+      documentation: https://digital.nhs.uk/developer/api-catalogue/signing-service
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Spine Directory Service - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Spine Directory Service - LDAP API
+      url: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-ldap
+      documentation: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-ldap
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Summary Care Record - FHIR API
+      url: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-fhir
+      documentation: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-fhir
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Summary Care Record - HL7 V3 API
+      url: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-hl7-v3
+      documentation: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-hl7-v3
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Technology Reference Update Distribution API
+      url: https://digital.nhs.uk/developer/api-catalogue/technology-reference-update-distribution-api
+      documentation: https://digital.nhs.uk/developer/api-catalogue/technology-reference-update-distribution-api
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+    - name: Urgent and Emergency Care Continuous Quality Improvement API
+      url: https://digital.nhs.uk/developer/api-catalogue/urgent-and-emergency-care-continuous-quality-improvement-api
+      documentation: https://digital.nhs.uk/developer/api-catalogue/urgent-and-emergency-care-continuous-quality-improvement-api
+      license: null
+      date_updated: '2024-04-23'
+      matched_on: url
+  contract_reference:
+    register: co-cddo/api-catalogue (UK Government API Catalogue, CDDO)
+    spec_file: null
+    role: public-sector-api-publisher
+    registered_name: nhs-digital
+    register_id: nhs-digital
+    matched_domain: digital.nhs.uk
+    detected_by: sweep-gov-open-data.py
+    detected: '2026-10-19'
+  detected_by: sweep-gov-open-data.py
+  first_seen: '2026-10-19'
+generated: '2026-10-19'
+method: searched
+source:
+- https://raw.githubusercontent.com/co-cddo/api-catalogue/main/data/catalogue.csv
+checked:
+- 'https://api.gouv.fr/api/v1/apis (200 text/html: not machine-readable)'
+- 'https://catalog.data.gov/api/3/action/package_search (404; GSA mirror keyed: 403 API_KEY_MISSING)'
+- https://raw.githubusercontent.com/co-cddo/api-catalogue/main/data/catalogue.csv
