@@ -64,58 +64,146 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-NHS England's API management platform providing FHIR R4 and REST APIs for healthcare interoperability across the NHS. The platform covers GP Connect (appointment management and access record), Personal Demographics Service, Electronic Prescription Service, Summary Care Records, NHS login (OpenID Connect for citizens), Booking and Referral, Organisation Data Service, and content syndication.
+NHS England's API management platform provides FHIR R4 and REST APIs for healthcare interoperability across the NHS. The platform covers GP Connect (appointment management and access record), Personal Demographics Service, Electronic Prescription Service, Summary Care Records, NHS login (OpenID Connect for citizens), Booking and Referral, Organisation Data Service, and content syndication. APIs are managed via NHS England's Apigee-based API platform and are targeted at system suppliers, NHS organisations, and accredited third-party healthcare application developers.
 
-**Developer Portal:** https://digital.nhs.uk/developer  
-**API Catalogue:** https://digital.nhs.uk/developer/api-catalogue  
-**GitHub:** https://github.com/NHSDigital  
-**Developer Community:** https://developer.community.nhs.uk/
+**Areas:** Healthcare · FHIR · NHS · United Kingdom · HL7 · Electronic Prescriptions · Patient Demographics · GP Connect · NHS Login · Interoperability
 
-## APIs Catalogued
+## NHS API on APIs.io
 
-| API | Description |
+Everything profiled for NHS API is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nhs-api/](https://apis.io/providers/nhs-api/)** — or go straight to one of the APIs or properties below.
+
+### APIs (13)
+
+- [GP Connect Access Document - FHIR API](https://apis.io/apis/nhs-api/gp-connect-access-document-fhir-api/) — Retrieve documents held at a patient's registered GP practice, such as letters, discharge summaries, and other clinical documents stored in GP systems. Used…
+- [EPS Prescription Tracker - FHIR API](https://apis.io/apis/nhs-api/eps-prescription-tracker-fhir-api/) — Real-time tracking of prescriptions within the Electronic Prescription Service. Enables authorised users to retrieve details about prescription status and…
+- [Booking and Referral - FHIR API](https://apis.io/apis/nhs-api/booking-and-referral-fhir-api/) — Send booking and referral information between NHS service providers using the NHS Booking and Referral Standard (BaRS). Enables sharing of clinical and…
+- [NHS Website Content API](https://apis.io/apis/nhs-api/nhs-website-content-api/) — Retrieve NHS-approved health information content (conditions, medicines, treatments, live well articles) for syndication into third-party apps and services.…
+- [Elective Waiting List API](https://apis.io/apis/nhs-api/elective-waiting-list-api/) — Access data from the NHS Waiting List Minimum Data Set (WLMDS), the national electronic database of NHS patient waiting list records. Supports performance…
+- [NHS API CodeSystem API](https://apis.io/apis/nhs-api/nhs-api-codesystem-api/) — The CodeSystem API from NHS API — 2 operation(s) for codesystem.
+- [NHS API List{id} API](https://apis.io/apis/nhs-api/nhs-api-list-id-api/) — The List{id} API from NHS API — 1 operation(s) for list{id}.
+- [NHS API Metadata API](https://apis.io/apis/nhs-api/nhs-api-metadata-api/) — The Metadata API from NHS API — 1 operation(s) for metadata.
+- [NHS API Organization API](https://apis.io/apis/nhs-api/nhs-api-organization-api/) — The Organization API from NHS API — 2 operation(s) for organization.
+- [NHS API OrganizationAffiliation API](https://apis.io/apis/nhs-api/nhs-api-organizationaffiliation-api/) — The OrganizationAffiliation API from NHS API — 2 operation(s) for organizationaffiliation.
+- [NHS API R4 API](https://apis.io/apis/nhs-api/nhs-api-r4-api/) — The R4 API from NHS API — 6 operation(s) for r4.
+- [NHS API STU3 API](https://apis.io/apis/nhs-api/nhs-api-stu3-api/) — The STU3 API from NHS API — 32 operation(s) for stu3.
+- [NHS API ValueSet API](https://apis.io/apis/nhs-api/nhs-api-valueset-api/) — The ValueSet API from NHS API — 2 operation(s) for valueset.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Nhs Api Agentic Access](https://apis.io/agentic-access/nhs-api/nhs-api-agentic-access/)
+
+#### JSON Schema (2)
+
+The data models the API reads and writes.
+
+- [NHS Organisation (ODS FHIR R4)](https://apis.io/schemas/nhs-api/nhs-organisation/)
+- [NHS Patient Demographics (PDS FHIR R4)](https://apis.io/schemas/nhs-api/nhs-patient-demographics/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Nhs Api Context](https://apis.io/jsonld/nhs-api/nhs-api/)
+
+#### Examples (3)
+
+Example requests and responses.
+
+- [E Referral Worklist Response](https://apis.io/examples/nhs-api/e-referral-worklist-response/)
+- [Organisation Search Response](https://apis.io/examples/nhs-api/organisation-search-response/)
+- [Patient Demographics Response](https://apis.io/examples/nhs-api/patient-demographics-response/)
+
+#### Collections (8)
+
+Postman and Open Collection request collections.
+
+- [e-Referrals Service CodeSystem API](https://apis.io/collections/nhs-api/open-nhs-api-codesystem-api/)
+- [e-Referrals Service CodeSystem List{id} API](https://apis.io/collections/nhs-api/open-nhs-api-list-id-api/)
+- [e-Referrals Service CodeSystem Metadata API](https://apis.io/collections/nhs-api/open-nhs-api-metadata-api/)
+- [e-Referrals Service CodeSystem Organization API](https://apis.io/collections/nhs-api/open-nhs-api-organization-api/)
+- [e-Referrals Service CodeSystem OrganizationAffiliation API](https://apis.io/collections/nhs-api/open-nhs-api-organizationaffiliation-api/)
+- [e-Referrals Service CodeSystem R4 API](https://apis.io/collections/nhs-api/open-nhs-api-r4-api/)
+- [e-Referrals Service CodeSystem STU3 API](https://apis.io/collections/nhs-api/open-nhs-api-stu3-api/)
+- [e-Referrals Service CodeSystem ValueSet API](https://apis.io/collections/nhs-api/open-nhs-api-valueset-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [NHS API — jsonschema rules](https://apis.io/rules/nhs-api/nhs-api-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Nhs Api Authentication](https://apis.io/security/nhs-api/nhs-api-authentication/)
+- [Nhs Api Domain Security](https://apis.io/security/nhs-api/nhs-api-domain-security/)
+- [Nhs Api Vulnerability Disclosure](https://apis.io/security/nhs-api/nhs-api-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.nhs.uk/)
+- [Documentation](https://digital.nhs.uk/developer/guides-and-documentation)
+- [Getting started](https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process)
+- [Terms of service](https://onboarding.prod.api.platform.nhs.uk/PolicyPages/TermsOfUsePolicy)
+
+## API Evangelist rating
+
+**Kin Score 33.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| Personal Demographics Service - FHIR API | Search, retrieve, and update patient demographic data from the national NHS patient database |
-| GP Connect Access Record Structured - FHIR API | Retrieve structured clinical records (medications, allergies, consultations) from GP practices |
-| GP Connect Appointment Management - FHIR API | Book, amend, and cancel GP practice appointments |
-| GP Connect Access Document - FHIR API | Retrieve clinical documents stored at GP practices |
-| Electronic Prescription Service - FHIR API | Create, sign, dispense, and track NHS electronic prescriptions |
-| EPS Prescription Tracker - FHIR API | Track real-time prescription status within EPS |
-| NHS Login API | OpenID Connect identity service for citizen authentication |
-| Booking and Referral - FHIR API | Send booking and referral information between NHS service providers |
-| Organisation Data Service - FHIR API | Access NHS organisation reference data by ODS code |
-| NHS Website Content API | Syndicate NHS-approved health information content |
-| Spine Directory Service - FHIR API | Discover endpoint and accreditation data for NHS Spine-connected systems |
-| NHS e-Referral Service - FHIR API | Manage outpatient referrals between primary and secondary care |
-| Elective Waiting List API | Access national NHS waiting list data |
+| Discoverability | 71.4 |
+| Contract quality | 48.9 |
+| Contract governance | 9.8 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 48.8 |
+| Access clarity | 10.5 |
 
-## Authentication
+**Agent readiness 24.0** — agent-aware
 
-NHS APIs use a layered authentication model:
-
-- **CIS2 / NHS Smartcard OAuth2** — For healthcare worker user-restricted access (GP Connect, PDS, EPS)
-- **Application-restricted (signed JWT)** — For machine-to-machine / system-level access
-- **NHS Login (OIDC)** — For citizen-facing applications
-
-## Environments
-
-| Environment | Base URL |
+| Agent-readiness dimension | Result |
 |---|---|
-| Sandbox | `https://sandbox.api.service.nhs.uk/` |
-| Integration | `https://int.api.service.nhs.uk/` |
-| Production | `https://api.service.nhs.uk/` |
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-## Access & Onboarding
+**Regulatory alignment 21.1** — Health
 
-All production access requires formal onboarding through the NHS Digital Onboarding Service. There are no commercial pricing tiers — APIs are free at the point of use for NHS-commissioned services and accredited suppliers. See [plans/nhs-api-plans.md](plans/nhs-api-plans.md) for details.
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nhs-api/](https://apis.io/providers/nhs-api/).
 
-## Rate Limits
+## How this profile is made
 
-The NHS Website Content API has a default limit of 4,000 requests/hour. Clinical API rate limits are agreed during onboarding. See [rate-limits/nhs-api-rate-limits.md](rate-limits/nhs-api-rate-limits.md) for details.
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Files
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for NHS API: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- `apis.yml` — APIs.json 0.19 provider profile
-- `plans/nhs-api-plans.md` — Access plans and onboarding tiers
-- `rate-limits/nhs-api-rate-limits.md` — Rate limiting documentation
-- `finops/nhs-api-finops.md` — Cost and FinOps guidance
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nhs-api/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
